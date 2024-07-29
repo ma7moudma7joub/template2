@@ -18,13 +18,52 @@ a {
 }
  body{
     font-family: "Open Sans", sans-serif;
-    background-color: black;
  }
  .container {
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
  }
+ .main-heading {
+   text-align: center;
+ }
+ .main-heading h2 {
+   font-size:40px;
+   font-weight:normal;
+   position: relative;
+   transform:uppercase;
+   margin-bottom: 70px;
+ }
+ .main-heading h2:before {
+  content:"";
+  width: 120px;
+  background-color:black;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+ }
+ .main-heading h2:after {
+  content:"";
+  width:14px;
+  height: 14px;
+  border-radius:50%;
+  background-color: white;
+  border: 2px solid black;
+  position: absolute;
+  bottom:-37px;
+  left: 50%;
+  transform: translateX(-50%);
+ }
+ .main-heading p {
+  color: #777;
+  line-height:2;
+  margin:0 auto 100px;
+  width: 550px;
+  max-width: 100%;
+ }
+
  @media (min-width: 768px) {
     .container {
       width: 750px;
@@ -236,4 +275,30 @@ a {
   .landing .bullets li.active {
     background-color: var(--main-color);
     border: none;
+  }
+  .services {
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+  }
+  .services .srv-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap:40px;
+    grid-row-gap:60px; 
+  }
+  .services .srv-container .srv {
+    display:flex;
+  }
+  .services .srv-container .srv i {
+    margin-right:50px;
+  }
+  .services .srv-container .srv h3 {
+    color: var(--main-color);
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  .services .srv-container .srv p {
+    color: #777;
+    line-height: 2;
+    font-size: 14px;
   }
