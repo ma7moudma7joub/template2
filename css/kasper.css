@@ -151,3 +151,7 @@ a {
       align-items: flex-start;
     }
   }
+  .landing {
+    height: 100vh;
+    background-image: url(../images/landing\ \(1\).jpg);
+  }
