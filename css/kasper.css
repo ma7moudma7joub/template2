@@ -280,17 +280,45 @@ a {
     padding-top:var(--section-padding);
     padding-bottom:var(--section-padding);
   }
-  .services .srv-container {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    grid-column-gap:40px;
-    grid-row-gap:60px; 
+  @media (min-width:768px) {
+    .services .srv-container {
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      grid-column-gap:40px;
+      grid-row-gap:60px; 
+    }
   }
   .services .srv-container .srv {
     display:flex;
   }
+  @media (max-width:768px) {
+    .services .srv-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .services .srv-container .srv {
+      flex-direction: column;
+      justify-items: center;
+      align-content: center;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+      .services .srv-container .srv p{
+        line-height: 1.5;
+        font-size: 12px;
+        text-align: center;
+        width: 300px;
+      }
+    }
   .services .srv-container .srv i {
     margin-right:50px;
+  }
+  @media (max-width:768px) {
+    .services .srv-container .srv i{
+      margin:0 0 20px;
+    }
   }
   .services .srv-container .srv h3 {
     color: var(--main-color);
