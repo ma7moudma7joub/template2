@@ -175,9 +175,6 @@ html {
     header .container nav ul {
       display: none;
     }
-    header .container nav ul li a {
-      padding: 20px;
-    }
     header .container nav .burger {
       font-size: 22px;
     }
@@ -191,6 +188,11 @@ html {
       top:100%;
       flex-direction: column;
       align-items: flex-start;
+    }
+    header .container nav ul li a {
+      padding: 15px 10px;
+      width: 100%;
+      display: block;
     }
   }
   .landing {
@@ -396,4 +398,80 @@ html {
     margin-right: 20px;
     top: 1px;
   }
-
+  .portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+  .portfolio .shuffle {
+    display:flex;
+    justify-content: center;
+  }
+  .portfolio .shuffle li {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+  .portfolio .shuffle .active {
+    background-color: var(--main-color);
+    color: white;
+  }
+  .portfolio .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .portfolio .box-container .box {
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width:768px) {
+    .portfolio .box-container .box {
+      flex-basis: 100%;
+    }
+  }
+  @media (min-width:970px) {
+    .portfolio .box-container .box {
+      flex-basis: 50%;
+    }
+  }
+  @media (min-width:1160px) {
+    .portfolio .box-container .box {
+      flex-basis: 25%;
+    }
+  }
+  .portfolio .box-container .box img {
+    max-width: 100%;
+    transition: .3s;
+  }
+  .portfolio .box-container .box .caption {
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    background-color: white;
+    transition: .3s;
+    width: 100%;
+    padding: 15px;
+  }
+  .portfolio .box-container .box:hover .caption {
+    bottom: 0;
+  }
+  .portfolio .box-container .box .caption h3 {
+    font-weight: normal;
+  }
+  .portfolio .box-container .box .caption p {
+    color: var(--main-color);
+  }
+  .portfolio .box-container .box:hover img {
+    transform: scale(1.1) rotate(3deg);
+  }
+  .portfolio .more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
